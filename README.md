@@ -27,3 +27,4 @@ A dashboard foi projetada para permitir a visualização e análise de dados tem
 - `public/` : Contém arquivos públicos, como o `index.html`
 - `README.md` : Documentação do projeto
 
+Trabalho desenvolvido por Jean Cassiano.
