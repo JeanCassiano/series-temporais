@@ -3,16 +3,21 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 // Contêiner da Navbar
-export const NavbarContainer = styled.nav`
-  background-color: #030114;
+export const NavbarContainer = styled.nav<{ isScrolled: boolean }>`
+  background-color: ${({ isScrolled }) => (isScrolled ? 'rgba(0, 0, 0, 0.1)' : 'rgba(0, 0, 0, 0.8)')};
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  position: sticky;
+  position: fixed; /* Alterado de sticky para fixed */
+  width: 100%; /* Garante que a navbar ocupe toda a largura da tela */
   top: 0;
   z-index: 1000;
+  transition: background-color 0.3s ease; 
+  pointer-events: auto; /* Permite interação com a navbar */
 `;
+
+
 
 // Estilo da Div da Marca
 export const Brand = styled.div`

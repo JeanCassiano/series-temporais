@@ -1,18 +1,31 @@
-// src/components/Navbar/index.tsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavbarContainer, Brand, Logo, NavLinks, NavLinkItem, StyledLink } from './styles.tsx';
 import Burger from '../Burger/index.tsx';
 import Sidebar from '../SideBar/index.tsx';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  // Função para monitorar o scroll
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    setIsScrolled(scrollTop > 0);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <NavbarContainer>
+    <NavbarContainer isScrolled={isScrolled}>
       <Brand>
         <Logo to="/">Temporal Analysis</Logo>
       </Brand>

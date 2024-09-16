@@ -6,7 +6,6 @@ import Home from './pages/Home/index.tsx';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';*/
-import Layout from './components/Layout/index.tsx';
 import GlobalStyles from './GlobalStyles/styles.tsx'; // Importando estilos globais
 
 const App: React.FC = () => {
@@ -15,8 +14,7 @@ const App: React.FC = () => {
       <GlobalStyles /> {/* Aplicando estilos globais */}
       <Routes>
         {/* Definimos um layout geral que envolve todas as rotas */}
-        //<Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+        //<Route path="/" element={<Home />}>
         </Route>
       </Routes>
     </Router>
