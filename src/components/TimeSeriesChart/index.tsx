@@ -2,33 +2,30 @@ import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import { useInView } from 'react-intersection-observer';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importando o CSS do Bootstrap
+import { CanvasContainer } from './styles.tsx'; // Importando o estilo
 
 const TimeSeriesChart: React.FC = () => {
   const { ref, inView } = useInView({
-    triggerOnce: true, // Animação apenas uma vez
-    threshold: 0.1, // Quando 10% do elemento estiver visível
+    triggerOnce: true,
+    threshold: 0.1,
   });
 
-  // Estado para controlar o progresso da animação
   const [progress, setProgress] = useState(0);
   const [visibleData, setVisibleData] = useState<any[]>([]);
   type DataPoint = { name: string; red: number; green: number; cyan: number };
 
-  const data: DataPoint[] = [
-
-  ];
+  const data: DataPoint[] = [];
   const generateData = (numPoints: number): DataPoint[] => {
     const newData: DataPoint[] = [];
     for (let i = 1; i <= numPoints; i++) {
-      const red = Math.floor(Math.random() * 1001); // Valores aleatórios entre 0 e 100
-      const green = Math.floor(Math.random() * 1001); // Valores aleatórios entre 0 e 100
-      const cyan = Math.floor(Math.random() * 1001); // Valores aleatórios entre 0 e 100
+      const red = Math.floor(Math.random() * 1001);
+      const green = Math.floor(Math.random() * 1001);
+      const cyan = Math.floor(Math.random() * 1001);
       newData.push({ name: `Point ${i + data.length}`, red, green, cyan });
     }
     return newData;
   };
-  
-  // Gerando x novos pontos e adicionando ao array existente
+
   const additionalData = generateData(50);
   data.push(...additionalData);
 
@@ -37,13 +34,13 @@ const TimeSeriesChart: React.FC = () => {
       const interval = setInterval(() => {
         setProgress((prevProgress) => {
           const newProgress = prevProgress + 1;
-          setVisibleData(data.slice(0, newProgress)); // Mostra dados progressivamente
+          setVisibleData(data.slice(0, newProgress));
           if (newProgress >= data.length) {
             clearInterval(interval);
           }
           return newProgress;
         });
-      }, 80); // Aumenta a progressão suavemente
+      }, 80);
     }
   }, [inView]);
 
@@ -55,12 +52,12 @@ const TimeSeriesChart: React.FC = () => {
         width: '100%',
         marginBottom: '20px',
         marginTop: '40px',
-        border: '1px solid white', // Borda branca
+        border: '1px solid white',
       }}
     >
       <div className="card-body">
         <h5 className="card-title">Just a sample of what we will cover</h5>
-        <div className="d-flex justify-content-center">
+        <CanvasContainer>
           <LineChart
             width={600}
             height={400}
@@ -74,10 +71,10 @@ const TimeSeriesChart: React.FC = () => {
             <Line type="monotone" dataKey="green" stroke="#00ff00" strokeWidth={1.5} />
             <Line type="monotone" dataKey="cyan" stroke="#00ffff" strokeWidth={1.5} />
           </LineChart>
-        </div>
+        </CanvasContainer>
       </div>
     </div>
   );
-}  
+};
 
 export default TimeSeriesChart;

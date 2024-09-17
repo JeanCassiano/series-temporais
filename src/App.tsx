@@ -11,9 +11,8 @@ import GlobalStyles from './GlobalStyles/styles.tsx'; // Importando estilos glob
 const App: React.FC = () => {
   return (
     <Router>
-      <GlobalStyles /> {/* Aplicando estilos globais */}
+      <GlobalStyles />
       <Routes>
-        {/* Definimos um layout geral que envolve todas as rotas */}
         //<Route path="/" element={<Home />}>
         </Route>
       </Routes>

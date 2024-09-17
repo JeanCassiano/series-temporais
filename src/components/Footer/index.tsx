@@ -1,6 +1,6 @@
 import React from "react";
 import { FooterContainer } from "./styles.tsx";
-import {FaTwitter, FaFacebook, FaInstagram} from 'react-icons/fa';
+import {FaFacebook, FaInstagram} from 'react-icons/fa';
 
 
 
