@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
         <NavLinkItem><StyledLink to="/">Home</StyledLink></NavLinkItem>
         <NavLinkItem><StyledLink to="/about">About</StyledLink></NavLinkItem>
         <NavLinkItem><StyledLink to="/database">DataBase</StyledLink></NavLinkItem>
-        <NavLinkItem><StyledLink to="/projects">Analysis</StyledLink></NavLinkItem>
+        <NavLinkItem><StyledLink to="/Analysis">Analysis</StyledLink></NavLinkItem>
         <NavLinkItem><StyledLink to="/contact">Contact</StyledLink></NavLinkItem>
       </NavLinks>
       <Burger isOpen={isOpen} toggleMenu={toggleMenu} />

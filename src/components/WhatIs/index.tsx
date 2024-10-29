@@ -10,7 +10,7 @@ const WhatIs: React.FC = () => {
         {/* Coluna para o texto "What is..." */}
         <Col md={6}>
           <WhatIsContainer>
-            <Title>What is Temporal Analysis?</Title>
+            <Title>What is Temporal Series?</Title>
             <Description>
               Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida ipsum sollicitudin litora faucibus taciti ultrices. Nostra ac volutpat senectus lorem maecenas. Viverra vivamus leo ad etiam litora etiam volutpat donec. Ac class ad gravida; tellus justo facilisis dolor. Suscipit netus suspendisse inceptos senectus at ipsum ut. Sollicitudin accumsan sodales vivamus ligula, sociosqu consectetur. Nulla vulputate lobortis donec turpis senectus dolor; nec finibus sem.
               <p></p>
