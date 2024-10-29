@@ -3,7 +3,7 @@ import * as d3 from "d3";
 import { Container } from "./styles.tsx";
 import Header from "../../components/Header/index.tsx";
 import Navbar from "../../components/Navbar/index.tsx";
-
+import Footer from "../../components/Footer/index.tsx";
 const Analysis: React.FC = () => {
   const [selectedSeries, setSelectedSeries] = useState<string[]>([
     "Série 1",
@@ -247,6 +247,7 @@ const Analysis: React.FC = () => {
           Resetar Zoom
         </button>
       </div>
+      <Footer/>
     </Container>
   );
 };
