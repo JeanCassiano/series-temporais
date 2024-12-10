@@ -7,9 +7,11 @@ interface Props {
 }
 
 const images: Record<string, string> = {
-  img1: 'imgs/background-home.jpg', // Verifique se o caminho da imagem está correto
-  img2: 'imgs/img2.jpg', // Adicione o caminho para a imagem 2
-  // Você pode adicionar mais imagens aqui conforme necessário
+  img1: 'imgs/img1.jpg',
+  img2: 'imgs/img2.jpg',
+  img3: 'imgs/img3.jpg', 
+  img4: 'imgs/img4.jpg'
+
 };
 
 const Header: React.FC<Props> = ({ url }) => {
@@ -17,19 +19,33 @@ const Header: React.FC<Props> = ({ url }) => {
   const img = images[url] || images['img1'];
 
   return (
-    <HeaderContainer style={{ backgroundImage: `url(${img})` }}>
+    <HeaderContainer style={{ backgroundImage: `url(${img})`  }}>
       <TextDiv>
         <HeaderTextTitle>
-          {url === 'img2' ? (
-            <>Welcome to our <Highlight>Advanced Analysis</Highlight></>
-          ) : (
-            <>Welcome to our <Highlight>Temporal Analysis</Highlight></>
-          )}
+        {url === 'img1' ? (
+          <>Welcome to our <Highlight>Temporal Analysis</Highlight></>
+        ) : url === 'img2' ? (
+          <>Welcome to our <Highlight>Advanced Analysis</Highlight></>
+        ) : url === 'img3' ? (
+          <>Welcome to our <Highlight>About Page</Highlight></>
+        ) : url === 'img4' ? (
+          <>Let's explore some <Highlight>Questions</Highlight> About our <Highlight> Database</Highlight></>
+        ) : (
+          <>Welcome to our <Highlight>Temporal Analysis</Highlight></>
+        )}
         </HeaderTextTitle>
         <div style={{ maxWidth: '60vw', fontSize: '1.2rem', lineHeight: '1.6' }}>
           {url === 'img2' ? (
             <>
               Explore in-depth insights on <Highlight>economic trends</Highlight> and <Highlight>forecasting models</Highlight>.
+            </>
+          ) : url === 'img3' ?(
+            <>
+              Let's explore a little bit of what our works is <Highlight>ABOUT</Highlight>.
+            </>
+          ) : url === 'img4' ?(
+            <>
+              Here we will bring up some <Highlight> questions </Highlight>that we will try to <Highlight> answer </Highlight> for you in the analyses
             </>
           ) : (
             <>

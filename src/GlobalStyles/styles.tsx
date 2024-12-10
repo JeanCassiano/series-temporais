@@ -9,19 +9,19 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: #030114; /* Fundo cinza levemente escuro */
-    color: #ffffff; /* Cor padrão da fonte em branco */
+    background-color: #020202; /* Fundo cinza levemente escuro */
+    color: #E8E9F3; /* Cor padrão da fonte em branco */
     font-family: 'Poppins', sans-serif; /* Aplicando a nova fonte */
     line-height: 1.6;
   }
 
   a {
-    color: #add8e6; /* Azul claro para links */
+    color: #027ed1; /* Azul claro para links */
     text-decoration: none;
     transition: color 0.3s;
 
     &:hover {
-      color: #ffffff; /* Branco ao passar o mouse */
+      color: #E8E9F3; /* Branco ao passar o mouse */
     }
   }
 `;

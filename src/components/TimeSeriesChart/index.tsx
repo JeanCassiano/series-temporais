@@ -52,7 +52,6 @@ const TimeSeriesChart: React.FC = () => {
         width: '100%',
         marginBottom: '20px',
         marginTop: '40px',
-        border: '1px solid white',
       }}
     >
       <div className="card-body">

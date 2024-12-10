@@ -28,13 +28,13 @@ export const Brand = styled.div`
 // Logo com Estilo Personalizado
 export const Logo = styled(Link)`
   font-size: 2rem;
-  color: #add8e6;
+  color: #027ed1;
   text-decoration: none;
   font-weight: bold;
   margin-right: 30px;
 
   &:hover {
-    color: #ffb6c1;
+    color: #AB3428;
   }
 `;
 
@@ -58,7 +58,7 @@ export const NavLinkItem = styled.li`
 
 // Links Estilizados
 export const StyledLink = styled(Link)`
-  color: #add8e6;
+  color: #027ed1;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
@@ -66,7 +66,7 @@ export const StyledLink = styled(Link)`
   padding: 5px 10px;
 
   &:hover {
-    color: #ffb6c1;
+    color: #AB3428;
   }
 `;
 
@@ -77,7 +77,7 @@ export const BurgerButton = styled.button`
   justify-content: space-around;
   width: 30px;
   height: 30px;
-  background: transparent;
+  background: #027ed1;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -86,7 +86,7 @@ export const BurgerButton = styled.button`
   span {
     width: 100%;
     height: 3px;
-    background: #add8e6;
+    background: #027ed1;
     border-radius: 10px;
     transition: all 0.3s ease;
   }
@@ -116,7 +116,7 @@ export const SidebarContainer = styled.div<{ isOpen: boolean }>`
   right: 0;
   width: 250px;
   height: 100%;
-  background-color: #333;
+  background-color: #020202;
   display: flex;
   flex-direction: column;
   align-items: center;

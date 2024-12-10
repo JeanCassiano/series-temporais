@@ -7,7 +7,7 @@ export const Container = styled.div`
   justify-content: flex-start;
   height: 100%;
   width: 100%;
-  background-color: #282c34;
+  background-color: transparent;
   color: white;
 
   #chart {

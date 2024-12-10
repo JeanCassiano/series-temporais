@@ -13,9 +13,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleMenu }) => {
       <NavLinks>
         <NavLinkItem><StyledLink to="/" onClick={toggleMenu}>Home</StyledLink></NavLinkItem>
         <NavLinkItem><StyledLink to="/about" onClick={toggleMenu}>About</StyledLink></NavLinkItem>
-        <NavLinkItem><StyledLink to="/skills" onClick={toggleMenu}>Skills</StyledLink></NavLinkItem>
-        <NavLinkItem><StyledLink to="/projects" onClick={toggleMenu}>Projects</StyledLink></NavLinkItem>
-        <NavLinkItem><StyledLink to="/contact" onClick={toggleMenu}>Contact</StyledLink></NavLinkItem>
+        <NavLinkItem><StyledLink to="/questions" onClick={toggleMenu}>Questions</StyledLink></NavLinkItem>
+        <NavLinkItem><StyledLink to="/Analysis" onClick={toggleMenu}>Analysis</StyledLink></NavLinkItem>
       </NavLinks>
     </SidebarContainer>
   );

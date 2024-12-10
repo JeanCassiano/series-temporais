@@ -8,6 +8,8 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';*/
 import GlobalStyles from './GlobalStyles/styles.tsx'; // Importando estilos globais
 import Analysis from './pages/Analysis/index.tsx';
+import About from './pages/About/index.tsx';
+import Questions from './pages/Questions/index.tsx';
 
 const App: React.FC = () => {
   return (
@@ -15,6 +17,8 @@ const App: React.FC = () => {
       <GlobalStyles />
       <Routes>
         <Route path="/" element={<Home />}/>
+        <Route path="/about" element={<About />}/>
+      <Route path="/questions" element={<Questions />}/>
         <Route path="/Analysis" element={<Analysis />}>
         </Route>
       </Routes>

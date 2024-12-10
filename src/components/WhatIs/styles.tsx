@@ -6,7 +6,7 @@ export const WhatIsContainer = styled.div`
   background-color: transparent;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  color: #ffffff;
+  color: #E8E9F3;
   margin-top: 20px;
 `;
 

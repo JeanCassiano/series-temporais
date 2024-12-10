@@ -6,6 +6,7 @@ export const CanvasContainer = styled.div`
   justify-content: center;
   margin-bottom: 20px; /* Margem inferior do gráfico */
   margin-top: 30px;
+  
 
   /* Estilos responsivos usando @media */
   @media (max-width: 768px) {

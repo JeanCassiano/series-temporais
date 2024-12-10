@@ -45,7 +45,7 @@ export const HeaderTextTitle = styled.h1`
 `;
 
 export const Highlight = styled.span`
-  color: #027ed1; /* Cor de destaque para algumas palavras */
+  color: #027ed1; /* Cor de destaque para algumas palavras */ 
 `;
 
 export const TextDiv = styled.div`

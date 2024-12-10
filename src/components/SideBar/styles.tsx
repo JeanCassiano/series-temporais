@@ -8,7 +8,7 @@ export const SidebarContainer = styled.div<{ isOpen: boolean }>`
   right: 0;
   width: 250px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: #020202;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +33,7 @@ export const NavLinkItem = styled.li`
 `;
 
 export const StyledLink = styled(Link)`
-  color: #add8e6;
+  color: #027ed1;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
@@ -41,6 +41,6 @@ export const StyledLink = styled(Link)`
   padding: 5px 10px;
 
   &:hover {
-    color: #ffb6c1;
+    color: #AB3428;
   }
 `;
