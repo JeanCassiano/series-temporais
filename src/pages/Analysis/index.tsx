@@ -55,6 +55,7 @@ const Analysis: React.FC = () => {
         <button onClick={() => handleViewChange('patterns')}>View Patterns</button>
         <button onClick={() => handleViewChange('stationary')}>View Stationary Test</button>
         <button onClick={() => handleViewChange('acf')}>View ACF</button>
+        <button onClick={() => handleViewChange('pacf')}>View PACF</button>
         <button onClick={() => handleViewChange('autoarima')}>View AutoARIMA</button>
         <button onClick={() => handleViewChange('arima')}>View ARIMA</button>
         <button onClick={() => handleViewChange('sarima')}>View SARIMA</button> 
@@ -120,6 +121,7 @@ const Analysis: React.FC = () => {
       {viewMode === 'acf' && <TimeSeriesACF id={seriesId} />}
       {viewMode === 'autoarima' && <TimeSeriesAutoARIMA id={seriesId} />}
       {viewMode === 'prophet' && <TimeSeriesProphet id={seriesId} />}
+      {viewMode === 'pacf' && <TimeSeriesPACF id={seriesId} />}
       <Contact />
       <Footer />
     </Container>
